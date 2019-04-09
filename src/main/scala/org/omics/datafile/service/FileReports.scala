@@ -16,8 +16,7 @@ object FileReports {
       .master("local[*]")
       .getOrCreate()
 
-    val readConfig = ReadConfig(Map("uri" -> "mongodb://ddi_user:tDzDd81J@mongos-hxvm-001.ebi.ac.uk:27017/admin",
-      "database" -> "ddi_db", "collection" -> "datasets.dataset")) // 1)
+
     val zipDf = sparkSession.read.mongo(readConfig)
 
 
